@@ -10,7 +10,7 @@
     oh-my-zsh = {
       enable = true;
       custom = "$HOME/.oh-my-zsh-custom/";
-      theme = "agnoster-ben";
+      theme = "agnoster-custom";
       plugins = [
         "git"
       ];
@@ -22,5 +22,8 @@
       source ${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
       source ${pkgs.zsh-forgit}/share/zsh/zsh-forgit/forgit.plugin.zsh
     '';
+  };
+  home.file.".oh-my-zsh-custom/themes/agnoster-custom.zsh-theme" = {
+    source = ./agnoster-custom.zsh-theme;
   };
 }
